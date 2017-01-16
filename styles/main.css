@@ -124,3 +124,6 @@ html {
 .clearfix::after {
    clear: both;
 }
+.container.narrow {
+     max-width: 56rem;
+ }
