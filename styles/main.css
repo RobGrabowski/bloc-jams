@@ -27,7 +27,7 @@ html {
      position: relative; /* positioning will be explained in a resource */
      left: 2rem;
  }
-...
+
  /* Medium screens (640px) */
  @media (min-width: 640px) {
      html { font-size: 112%; }
@@ -48,3 +48,13 @@ html {
  @media (min-width: 1024px) {
      html { font-size: 120%; }
  }
+
+.clearfix::before,
+.clearfix::after {
+   content: " ";
+   display: table;
+}
+
+.clearfix::after {
+   clear: both;
+}
