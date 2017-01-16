@@ -42,7 +42,16 @@ html {
      color: white;
      /* #3 */
      text-decoration: none;
+    
  }
+
+.links-container:active{
+    background-color: white;
+}
+/* .links-container:active {
+    background-color: white;
+} */
+
 
 
 .links-container .navbar-link {
@@ -54,6 +63,23 @@ html {
      /* #4 */
      vertical-align: middle;
      color: white;
+     font-size: 0.625rem;
+     letter-spacing: 0.05rem;
+     font-weight: 700;
+     text-transform: uppercase;
+     /* #3 */
+     text-decoration: none;
+     cursor: pointer;
+ }
+.links-container .navbar-link:active {
+     display: table-cell;
+     position: relative;
+     height: 100%;
+     padding-left: 1rem;
+     padding-right: 1rem;
+     /* #4 */
+     vertical-align: middle;
+     color: black;
      font-size: 0.625rem;
      letter-spacing: 0.05rem;
      font-weight: 700;
