@@ -116,12 +116,20 @@ var songRows = document.getElementsByClassName('album-view-song-item');
      }
 
  var findParentByClassName = function(element, targetClass){
-         if (element) {
-            var currentParent = element.parentElement;
-            while (currentParent.className != targetClass && currentParent.className !== null) {
-                currentParent = currentParent.parentElement;
+       //Shows a different alert when it fails to find a parent with the given class name: "No parent found with that class name".
+        if (element) {
+            if(!element.parentElement) {
+                alert('No parent found');
+            }else{
+                var currentParent = element.parentElement;
+                var find = 0;
+                while (currentParent.className != targetClass && currentParent.className !== null) {
+                    currentParent = currentParent.parentElement;
+                    find = 1;
+                }
+                if(currentParent === element.parentElement) {alert("No parent found with that class name") }
+                return currentParent;
             }
-            return currentParent;
         }
      }
  var clickHandler = function(targetElement) {
