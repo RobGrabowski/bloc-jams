@@ -22,6 +22,22 @@
      year: '1909',
      albumArtUrl: 'assets/images/album_covers/20.png',
      songs: [
+         { title: 'Come together', duration: '1:01' },
+         { title: 'Octopuses Garden', duration: '5:01' },
+         { title: 'Something', duration: '3:21'},
+         { title: 'Sun King', duration: '3:14' },
+         { title: 'The End', duration: '2:15'}
+     ]
+ };
+
+ // Beatles Album
+ var albumBeatles = {
+     title: 'Abby Road',
+     artist: 'The Beatles',
+     label: 'EM',
+     year: '1964',
+     albumArtUrl: 'assets/images/album_covers/abbeyroad.jpeg',
+     songs: [
          { title: 'Hello, Operator?', duration: '1:01' },
          { title: 'Ring, ring, ring', duration: '5:01' },
          { title: 'Fits in your pocket', duration: '3:21'},
@@ -67,4 +83,18 @@ var createSongRow = function(songNumber, songName, songLength) {
  
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
+     var cover = document.getElementsByClassName('album-cover-art')[0];
+     cover.addEventListener('click', function() {
+         console.log('here');
+         var album= document.getElementsByClassName('album-view-title')[0].textContent;
+         if(album == 'The Colors'){
+             setCurrentAlbum(albumMarconi);
+         }else if (album == 'The Telephone'){
+             setCurrentAlbum(albumBeatles);
+         }
+         else{
+             setCurrentAlbum(albumPicasso);
+         }
+         
+     });
  };
